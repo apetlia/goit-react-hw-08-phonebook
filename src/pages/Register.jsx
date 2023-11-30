@@ -30,7 +30,7 @@ export default function SignUp() {
         toast.success('New user created');
       })
       .catch(() => {
-        toast.error('Creation error');
+        toast.error('Creation error, check password and email');
       });
   };
 
@@ -84,6 +84,9 @@ export default function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="new-password"
+                inputProps={{
+                  minLength: 8,
+                }}
               />
             </Grid>
           </Grid>

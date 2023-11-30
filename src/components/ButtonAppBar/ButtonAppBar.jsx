@@ -10,7 +10,7 @@ export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar sx={{ alignItems: 'baseline' }}>
+        <Toolbar sx={{ alignItems: 'baseline', flexWrap: 'wrap' }}>
           <Button
             sx={{ marginRight: 2, fontSize: '30px' }}
             color="inherit"

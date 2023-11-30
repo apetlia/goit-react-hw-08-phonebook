@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export const AuthMenu = () => {
   return (
-    <Box sx={{ marginLeft: 'auto' }}>
+    <Box>
       <Button color="inherit" component={RouterLink} to="/login">
         Login
       </Button>

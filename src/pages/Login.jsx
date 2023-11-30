@@ -28,7 +28,7 @@ export default function SignIn() {
         toast.success('Login Success');
       })
       .catch(() => {
-        toast.error('Login Error');
+        toast.error('Login Error, check password and email');
       });
   };
 

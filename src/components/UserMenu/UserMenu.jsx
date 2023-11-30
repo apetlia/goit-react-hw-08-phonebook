@@ -13,7 +13,7 @@ const UserMenu = () => {
   };
 
   return (
-    <Box sx={{ marginLeft: 'auto' }}>
+    <Box>
       <span>{email}</span>
       <Button color="inherit" onClick={handleClick}>
         Logout

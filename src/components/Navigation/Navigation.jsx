@@ -11,7 +11,12 @@ const Navigation = () => {
 
   return (
     <>
-      <Button color="inherit" component={RouterLink} to="/contacts">
+      <Button
+        sx={{ marginRight: 'auto' }}
+        color="inherit"
+        component={RouterLink}
+        to="/contacts"
+      >
         Contacts
       </Button>
 
