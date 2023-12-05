@@ -30,15 +30,7 @@ const ContactEditor = ({ closeEditor, contact }) => {
 
   return (
     <>
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'baseline',
-        }}
-      >
+      <Box component="form" onSubmit={handleSubmit}>
         <TextField
           margin="normal"
           required
@@ -46,6 +38,7 @@ const ContactEditor = ({ closeEditor, contact }) => {
           label="User name"
           name="name"
           defaultValue={contact.name}
+          fullWidth
         />
         <TextField
           margin="normal"
@@ -56,9 +49,10 @@ const ContactEditor = ({ closeEditor, contact }) => {
           name="number"
           inputProps={{ pattern: '[0-9 +]{6,16}' }}
           defaultValue={contact.number}
+          fullWidth
         />
 
-        <Button type="submit" variant="contained">
+        <Button type="submit" variant="contained" fullWidth>
           Edit
         </Button>
       </Box>

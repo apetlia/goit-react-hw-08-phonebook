@@ -10,6 +10,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { useDeleteContactMutation } from 'redux/contacts/slice';
 import { toast } from 'react-toastify';
 import ContactEditor from 'components/ContactEditor/ContactEditor';
+import Modal from 'components/Modal';
 
 export const ContactCard = ({ contact }) => {
   const [deleteContact] = useDeleteContactMutation();
@@ -49,7 +50,11 @@ export const ContactCard = ({ contact }) => {
           <DeleteIcon />
         </IconButton>
       </ListItem>
-      {openEdit && <ContactEditor closeEditor={openEditor} contact={contact} />}
+      {openEdit && (
+        <Modal closeModal={openEditor}>
+          <ContactEditor closeEditor={openEditor} contact={contact} />
+        </Modal>
+      )}
     </>
   );
 };

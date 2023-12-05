@@ -1,23 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsRefreshing, selectToken } from 'redux/auth/selectors';
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Layout from './Layout/Layout';
-import Contacts from 'pages/Contacts';
-import SignUp from 'pages/Register';
-import SignIn from 'pages/Login';
-import Home from 'pages/Home';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { getUser } from 'redux/auth/operations';
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+const Contacts = lazy(() => import('pages/Contacts'));
+const SignUp = lazy(() => import('pages/Register'));
+const SignIn = lazy(() => import('pages/Login'));
+const Home = lazy(() => import('pages/Home'));
 
 export const App = () => {
   const dispatch = useDispatch();
